@@ -1,0 +1,30 @@
+Set up the board:
+
+Arrange the board and all the pieces.
+Shuffle the Chance and Community Chest cards and place them in their designated spots on the board.
+Randomly determine who will go first.
+Each player starts with a set amount of money and places their token on the "GO" space.
+Begin the first turn:
+
+The first player rolls the dice and moves their token clockwise around the board.
+If the player lands on an unowned property, they can choose to buy it at the listed price.
+If the player lands on a property owned by another player, they must pay rent to that player based on the property's value and any buildings on it.
+If the player lands on a "Chance" or "Community Chest" space, they draw a card and follow the instructions on it.
+If the player lands on "Go to Jail" space, they must immediately go to jail.
+After the first turn:
+
+Play continues in turn order, with each player rolling the dice and moving their token around the board.
+Players can buy properties, build houses and hotels, and collect rent from other players who land on their properties.
+If a player lands on an unowned property, they can choose to buy it at the listed price.
+If a player lands on a property owned by another player, they must pay rent to that player based on the property's value and any buildings on it.
+Going to jail:
+
+If a player rolls doubles three times in a row, they must go to jail.
+A player can also be sent to jail by landing on the "Go to Jail" space, drawing a "Go to Jail" card, or by rolling too many times to get out of jail.
+A player in jail can try to roll doubles to get out of jail, or pay a fine to get out early.
+If the player doesn't roll doubles or pay the fine, they must wait three turns before being released from jail.
+Winning the game:
+
+The game continues until one player owns all the properties or all the other players have gone bankrupt.
+The player with the most money and assets at the end of the game is the winner.
+And that's the full algorithm for playing Monopoly London board game!
