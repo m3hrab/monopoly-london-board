@@ -1,8 +1,8 @@
 # Monopoly London Board Game Algorithm
-    This algorithm provides a set of instructions for playing the Monopoly London board game.
+This algorithm provides a set of instructions for playing the Monopoly London board game.
 
 ## Requirements
-    This algorithm requires a Monopoly London board game set, including the game board, tokens, dice, Chance and Community Chest cards, and play money.
+This algorithm requires a Monopoly London board game set, including the game board, tokens, dice, Chance and Community Chest cards, and play money.
 
 ## Instructions
 Set up the board:
@@ -39,7 +39,7 @@ Set up the board:
 
 
 ## Example Usage
-    This algorithm can be used to play a game of Monopoly London board game by following the instructions provided. Players can roll the dice, move their tokens around the board, buy properties, build houses and hotels, collect rent, draw cards, and try to avoid going to jail. The game continues until a winner is determined based on who owns the most properties and has the most money and assets.
+This algorithm can be used to play a game of Monopoly London board game by following the instructions provided. Players can roll the dice, move their tokens around the board, buy properties, build houses and hotels, collect rent, draw cards, and try to avoid going to jail. The game continues until a winner is determined based on who owns the most properties and has the most money and assets.
 
 # Contributing
 If you have any suggestions or improvements for this algorithm, feel free to submit a pull request or open an issue.
