@@ -5,5 +5,5 @@ class Settings():
         """A Class to store all the settings of """
         # Screen Settings
         self.screen_width = 1000
-        self.screen_height = 650 
-        self.bg_color = (206, 230, 225)
+        self.screen_height = 680 
+        self.bg_color = (168, 218, 220)#(206, 230, 225)
