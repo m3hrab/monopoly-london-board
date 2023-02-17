@@ -1,47 +1,58 @@
 import pygame
 import random
 
-class Die(pygame.sprite.Sprite):
-    def __init__(self, x, y, size):
+class Dice(pygame.sprite.Sprite):
+    def __init__(self, images, position, surface):
         super().__init__()
-        self.images = []
-        for i in range(1, 7):
-            image = pygame.image.load(f'main/images/{i}.png').convert_alpha()
-            image = pygame.transform.scale(image, (size, size))
-            self.images.append(image)
+        self.images = images
         self.image = self.images[0]
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
-        self.value = 1
-        self.rolling = False
-        self.roll_speed = 8
-        self.roll_frames = 16
-        self.roll_count = 0
-        self.roll_sound = pygame.mixer.Sound('main/audio/dice_roll.wav')
-
+        self.rect = self.image.get_rect(center=position)
+        self.roll_animation = RollAnimation(self.images, self.rect.center)
+        self.number = None
+        self.surface = surface
+        
     def roll(self):
-        self.value = random.randint(1, 6)
-        self.rolling = True
-        self.roll_count = 0
-        self.roll_sound.play()
-
+        self.roll_animation.start()
+        self.number = random.randint(1, 6)
+        self.image = self.images[self.number-1]
+        self.roll_animation.stop()
+        self.draw()
+        
     def update(self):
-        if self.rolling:
-            self.roll_count += 1
-            if self.roll_count > self.roll_frames:
-                self.rolling = False
-                self.image = self.images[self.value - 1]
-            else:
-                index = self.roll_count // self.roll_speed
-                self.image = self.images[index % 6]
-
-class Dice(pygame.sprite.Group):
-    def __init__(self, x, y, size):
+        self.roll_animation.update()
+        self.draw()
+        
+    def draw(self):
+        self.surface.blit(self.image, self.rect)
+        
+class RollAnimation(pygame.sprite.Sprite):
+    def __init__(self, images, position):
         super().__init__()
-        self.add(Die(x, y, size))
-        self.add(Die(x + size + 20, y, size))
-
-    def roll(self):
-        for die in self.sprites():
-            die.roll()
+        self.images = images
+        self.image_index = 0
+        self.image = self.images[self.image_index]
+        self.rect = self.image.get_rect(center=position)
+        self.animation_speed = 8
+        self.animation_counter = 0
+        self.animation_on = False
+        
+    def start(self):
+        self.animation_on = True
+        self.image_index = 0
+        self.image = self.images[self.image_index]
+        self.animation_counter = 0
+        
+    def stop(self):
+        self.animation_on = False
+        self.image_index = 0
+        self.image = self.images[self.image_index]
+        self.animation_counter = 0
+        
+    def update(self):
+        if self.animation_on:
+            self.animation_counter += 1
+            if self.animation_counter % self.animation_speed == 0:
+                self.image_index += 1
+                if self.image_index >= len(self.images):
+                    self.image_index = 0
+                self.image = self.images[self.image_index]
