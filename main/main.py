@@ -1,4 +1,3 @@
-import sys 
 import pygame 
 from settings import Settings  
 from board import Board
@@ -31,14 +30,13 @@ def run_game():
 
     dice = Dice(position1, position2, screen)
     
-    new_game = True
     text_input = TextInput(screen)
                         
     # Start the main loop for the game 
     while True:
-        gf.check_events(dice, new_game, text_input)
+        gf.check_events(dice, text_input)
         gf.update_screen(settings, screen, board, roll_btn,
-                        dice, new_game, text_input)
+                        dice, text_input)
         
         
 
