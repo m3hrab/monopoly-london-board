@@ -1,66 +1,46 @@
+import sys
 import pygame
 
 pygame.init()
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode([400,400])
 
-# Define some colors
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
-GRAY = (150, 150, 150)
+base_font = pygame.font.Font(None, 32)
 
-# Set the width and height of the screen [width, height]
-size = (700, 500)
-screen = pygame.display.set_mode(size)
+input_rect = pygame.Rect(100,100,140,32)
+color_active = (230,230,230)
+color_passive = (30,30,30)
 
-# Set the caption
-pygame.display.set_caption("Animated Button")
+color = color_passive
+active = False
 
-# Define the font and text
-font = pygame.font.Font(None, 36)
-text = font.render("Click Me", True, WHITE)
-
-# Define the button rect and initial color
-button_rect = pygame.Rect(250, 200, 200, 50)
-button_color = GRAY
-
-# Define the animation variables
-animation_speed = 5
-animation_direction = 1
-animation_offset = 0
-
-# Main loop
-done = False
-while not done:
-    # Event handling
+while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
-        elif event.type == pygame.MOUSEBUTTONDOWN:
-            if button_rect.collidepoint(event.pos):
-                print("Button clicked!")
-    
-    # Clear the screen
-    screen.fill(BLACK)
-    
-    # Update the button color and animation variables
-    if button_rect.collidepoint(pygame.mouse.get_pos()):
-        button_color = WHITE
-        animation_offset += animation_direction * animation_speed
-        if animation_offset > 10:
-            animation_direction = -1
-        elif animation_offset < 0:
-            animation_direction = 1
-    else:
-        button_color = GRAY
-        animation_offset = 0
-    
-    # Draw the button
-    pygame.draw.rect(screen, button_color, button_rect)
-    button_text_rect = text.get_rect(center=button_rect.center)
-    button_text_rect.move_ip(0, animation_offset)
-    screen.blit(text, button_text_rect)
-    
-    # Update the screen
+            pygame.quit()
+            sys.exit()
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if input_rect.collidepoint(event.pos):
+                active = True 
+                color = color_active
+            else:
+                active = False
+                color = color_passive
+
+        if event.type == pygame.KEYDOWN:
+            if active == True:
+                if event.key == pygame.K_BACKSPACE:
+                    user_text = user_text[:-1]
+                else:  
+                    user_text += event.unicode 
+                
+    screen.fill((0,0,0))
+    pygame.draw.rect(screen, color, input_rect, 2)
+    text_surface = base_font.render(user_text, True,(255,255,255))
+    screen.blit(text_surface,(input_rect.x, input_rect.y))
     pygame.display.flip()
 
-# Quit pygame
-pygame.quit()
+    input_rect.w = max(100, text_surface.get_width() + 10)
+    clock.tick(60)
+        
