@@ -18,8 +18,11 @@ def run_game():
     # Set a the game title 
     pygame.display.set_caption("Monopoly")
 
+    # Starting Window
+    text_input = TextInput(screen)
+
     # Make a board
-    board = Board(screen)
+    board = Board(screen, text_input)
 
     # Add the buttons
     roll_btn = Button(board)
@@ -30,8 +33,7 @@ def run_game():
 
     dice = Dice(position1, position2, screen)
     
-    text_input = TextInput(screen)
-                        
+   
     # Start the main loop for the game 
     while True:
         gf.check_events(dice, text_input)
