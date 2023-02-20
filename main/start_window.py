@@ -19,6 +19,7 @@ class TextInput():
         self.collect_assets = False
         self.add_is_click = False
         self.done_is_click = False
+        self.t_flag = True
 
 
         # Load images and sets it's position
@@ -73,13 +74,11 @@ class TextInput():
 
             if self.text != '':
                 # Check players tokens selected
-
                 if len(self.select_tokens)==len(self.players):
                     for i in range(len(self.tokens_rect)):
                         if self.tokens_rect[i].collidepoint(event.pos):
                             self.token_flag = True
                             self.select_tokens.append(self.tokens[i])
-                            # self.select_tokens_rect.append(self.tokens_rect[i].c)
                             break
 
 
@@ -87,7 +86,7 @@ class TextInput():
                     # If the user presses enter, finish input and clear the text box.
                     self.add_is_click = True
                     self.players.append(self.text)
-                    print(self.players)
+                    # print(self.players)
                     self.text = ''
                     self.token_flag = False
                                     

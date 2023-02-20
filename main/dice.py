@@ -21,7 +21,6 @@ class Dice(pygame.sprite.Sprite):
         self.screen = screen
         
     def roll(self):
-
         self.sound.play()
         for img in self.images:
             self.image = img

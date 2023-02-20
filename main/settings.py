@@ -7,3 +7,4 @@ class Settings():
         self.screen_width = 1000
         self.screen_height = 680 
         self.bg_color = (168, 218, 220)#(206, 230, 225)
+

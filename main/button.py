@@ -32,6 +32,11 @@ class Button:
         # trade btn
         self.trade_btn_rect.left = self.roll_btn_rect.right + 10
         self.trade_btn_rect.top = self.roll_btn_rect.bottom + 10
+
+    # def handle_events(self, event):
+    #     if self.roll_btn_rect.collidepoint(event.pos):
+    #         dice roll
+
         
     def draw(self, screen):
         screen.blit(self.roll_btn, self.roll_btn_rect)
@@ -40,8 +45,8 @@ class Button:
         screen.blit(self.trade_btn, self.trade_btn_rect)
 
     
-    def clicked(self, event):
-        return self.rect.collidepoint(event.pos)
+    # def clicked(self, event):
+    #     return self.rect.collidepoint(event.pos)
     
 
 
