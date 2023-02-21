@@ -1,9 +1,10 @@
 import pygame
 
 class Button:
-
+    "A class to manage all the buttons in the mae"
     def __init__(self, board):
 
+        # Load the button images
         self.roll_btn = pygame.image.load('main/Assets/images/buttons/roll.png')
         self.build_btn = pygame.image.load('main/Assets/images/buttons/build.png')
         self.sell_btn = pygame.image.load('main/Assets/images/buttons/sell.png')
@@ -37,7 +38,8 @@ class Button:
     #     if self.roll_btn_rect.collidepoint(event.pos):
     #         dice roll
 
-        
+    
+    # Draw the button
     def draw(self, screen):
         screen.blit(self.roll_btn, self.roll_btn_rect)
         screen.blit(self.build_btn, self.build_btn_rect)

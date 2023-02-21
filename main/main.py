@@ -46,18 +46,18 @@ def run_game():
 
     dice = Dice(position1, position2, screen)
 
-    # Players
+    # Create Players list from the list of players that added in the start window
     players = []
-    tokens = []
     for i in range(len(text_input.select_tokens)):
-        players.append(text_input.players[i])
-        tokens.append(text_input.select_tokens[i])
-
+        x = board.rect.right - 30
+        y = board.rect.bottom - 30 
+        player = MonopolyPlayer(text_input.players[i], text_input.select_tokens[i], x,y)
+        players.append(player)
 
     # Start the main loop for the game 
     while True:
-        gf.check_events(dice, roll_btn)
-        gf.update_screen(settings, screen, board, roll_btn, dice)
+        gf.check_events(dice, roll_btn, players)
+        gf.update_screen(settings, screen, board, roll_btn, dice, players)
         
         
 run_game()

@@ -1,0 +1,21 @@
+Issue: unable to move player token into currect position based the on dice value
+
+Explaination: 
+    In pygame we know that the every elements in pygame has position based on screens cordinate .
+    so, every elements in the game has a position(x,y). Similar that player tokens also have position 
+    In the begining of the game, players tokens position(x,y) is bottom-right corner of the board. When player
+    roll the dice. we use the dice value and multiply the with gap to the set tokens x position. So that,
+    the player tokens moves it's current position. When tokens x positon is equal or graten then the board
+    bottom-left position. then we update the tokens y position so that the token can move bottom to top based 
+    on the dice value. and Similar to the other corner as well 
+
+    Because of the Monopoly Board that i design earlier is not pixel perfect and most importantly some property cards
+    are not the same size that's why the player tokens position sometimes gone wrong.
+
+    Although try to solve by adding some if-else codition to adjust the tokens correct position but 
+    error raised when dice value is greater than the tokens right/left/top/bottom corner of the board.
+    the tokens cannot swith the tokens moving direction because of hard-coded adjustment that i try to do. 
+    that's why i cann't calculate the left/right tokens moves and the remains up/down move for the token.
+
+How i plan to solve it : just design board with exact same size properties card.(but after doing that Some property split in multilne or make it smaller font size)
+                    but also takes time. That i already used :'(      
