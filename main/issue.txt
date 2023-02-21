@@ -1,21 +1,10 @@
-Issue: unable to move player token into currect position based the on dice value
+Issue: Unable to move the player token to the correct position based on the dice value.
 
-Explaination: 
-    In pygame we know that the every elements in pygame has position based on screens cordinate .
-    so, every elements in the game has a position(x,y). Similar that player tokens also have position 
-    In the begining of the game, players tokens position(x,y) is bottom-right corner of the board. When player
-    roll the dice. we use the dice value and multiply the with gap to the set tokens x position. So that,
-    the player tokens moves it's current position. When tokens x positon is equal or graten then the board
-    bottom-left position. then we update the tokens y position so that the token can move bottom to top based 
-    on the dice value. and Similar to the other corner as well 
+Explanation:
+In Pygame, every element on the screen has a position based on the screen's coordinate system.
+ Similarly, player tokens also have a position on the Monopoly board. At the beginning of the game, the player tokens' position is set to the bottom-right corner of the board. When a player rolls the dice, we use the dice value and multiply it by a gap to set the token's x position so that it moves from its current position. When the token's x position is equal to or greater than the board's bottom-left position, we update the token's y position so that it can move from bottom to top based on the dice value. This process is repeated for the other corners of the board as well.
 
-    Because of the Monopoly Board that i design earlier is not pixel perfect and most importantly some property cards
-    are not the same size that's why the player tokens position sometimes gone wrong.
+However, because the Monopoly board design is not pixel-perfect, and some property cards are not the same size, the player tokens' positions sometimes go wrong. I tried to solve this by adding if-else conditions to adjust the tokens' positions, but errors arose when the dice value was greater than the tokens' right/left/top/bottom corner of the board. The tokens could not switch the moving direction because of the hard-coded adjustment I tried to do, which prevented me from calculating the left/right tokens' moves and the remaining up/down moves for the token.
 
-    Although try to solve by adding some if-else codition to adjust the tokens correct position but 
-    error raised when dice value is greater than the tokens right/left/top/bottom corner of the board.
-    the tokens cannot swith the tokens moving direction because of hard-coded adjustment that i try to do. 
-    that's why i cann't calculate the left/right tokens moves and the remains up/down move for the token.
-
-How i plan to solve it : just design board with exact same size properties card.(but after doing that Some property split in multilne or make it smaller font size)
-                    but also takes time. That i already used :'(      
+Solution:
+One way to solve this issue is to design the board with exact same size property cards. However, this may take a lot of time, and some properties may still split into multiple lines or require a smaller font size, making it challenging to achieve pixel-perfect positioning.
