@@ -1,4 +1,9 @@
 # Monopoly London Board Game 
+
+![start window](https://github.com/m3hrab/monopoly-london-board/blob/main/main/Assets/images/ss/Screenshot%20from%202023-07-31%2012-36-17.png?raw=true)
+
+![game window](https://github.com/m3hrab/monopoly-london-board/blob/main/main/Assets/images/ss/Screenshot%20from%202023-07-31%2012-25-45.png?raw=true)
+
 ## Requirements
 This algorithm requires a Monopoly London board game set, including the game board, tokens, dice, Chance and Community Chest cards, and play money.
 
@@ -41,6 +46,3 @@ This algorithm can be used to play a game of Monopoly London board game by follo
 
 # Contributing
 If you have any suggestions or improvements for this algorithm, feel free to submit a pull request or open an issue.
-
-# License
-This algorithm is licensed under the MIT License.
