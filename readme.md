@@ -4,45 +4,38 @@
 
 ![game window](https://github.com/m3hrab/monopoly-london-board/blob/main/main/Assets/images/ss/Screenshot%20from%202023-07-31%2012-25-45.png?raw=true)
 
-## Requirements
-This algorithm requires a Monopoly London board game set, including the game board, tokens, dice, Chance and Community Chest cards, and play money.
+## Description
 
-## Instructions
-Set up the board:
+Monopoly London is a thrilling adaptation of the classic Monopoly game, set in the bustling streets of the vibrant city of London. Immerse yourself in the rich history and iconic landmarks of this world-famous city as you buy, sell, and trade your way to become a property tycoon.
 
-1. Arrange the board and all the pieces.
-   - Shuffle the Chance and Community Chest cards and place them in their designated spots on the board.
-   - Randomly determine who will go first.
-   - Each player starts with a set amount of money and places their token on the "GO" space.
-2. Begin the first turn:
+## How to Play
 
-    - The first player rolls the dice and moves their token clockwise around the board.
-    - If the player lands on an unowned property, they can choose to buy it at the listed price.
-    - If the player lands on a property owned by another player, they must pay rent to that player based on the property's value and any buildings on it.
-    - If the player lands on a "Chance" or "Community Chest" space, they draw a card and follow the instructions on it.
-    - If the player lands on "Go to Jail" space, they must immediately go to jail.
+1. **Setup**: Gather 2 to 6 players, choose your favorite game piece, and place all players' pieces on the "Go" space. Each player starts with a set amount of money.
 
-3. After the first turn:
+2. **Taking Turns**: Players take turns rolling the dice and moving their game piece clockwise around the board. The number on the dice indicates the number of spaces to move.
 
-    - Play continues in turn order, with each player rolling the dice and moving their token around the board.
-    - Players can buy properties, build houses and hotels, and collect rent from other players who land on their properties.
-    - If a player lands on an unowned property, they can choose to buy it at the listed price.
-    - If a player lands on a property owned by another player, they must pay rent to that player based on the property's value and any buildings on it.
+3. **Property Purchase**: When landing on an unowned property, you have the option to purchase it for the listed price. If you choose not to buy, the property will be auctioned to the highest bidder.
 
-4. Going to jail:
+4. **Collecting Rent**: When other players land on a property you own, they must pay you rent according to the property's value and any improvements you've made.
 
-    - If a player rolls doubles three times in a row, they must go to jail.
-    - A player can also be sent to jail by landing on the "Go to Jail" space, drawing a "Go to Jail" card, or by rolling too many times to get out of jail.
-    - A player in jail can try to roll doubles to get out of jail, or pay a fine to get out early.
-    - If the player doesn't roll doubles or pay the fine, they must wait three turns before being released from jail.
-5. Winning the game:
+5. **Chance and Community Chest**: Draw cards from the Chance and Community Chest decks, which can lead to unexpected windfalls or setbacks.
 
-    - The game continues until one player owns all the properties or all the other players have gone bankrupt.
-    - The player with the most money and assets at the end of the game is the winner.
+6. **Building Houses and Hotels**: As you collect full sets of properties of the same color, you can build houses and later hotels on them. This increases the rent other players must pay when landing on your properties.
 
+7. **Jail**: If you land on the "Jail" space, you'll be "Just Visiting." However, if you roll doubles three times in a row or draw a "Go to Jail" card, you'll be sent to jail and must try to roll doubles to get out.
 
-## Example Usage
-This algorithm can be used to play a game of Monopoly London board game by following the instructions provided. Players can roll the dice, move their tokens around the board, buy properties, build houses and hotels, collect rent, draw cards, and try to avoid going to jail. The game continues until a winner is determined based on who owns the most properties and has the most money and assets.
+8. **Free Parking**: The "Free Parking" space is a resting point with no additional benefits or penalties.
+
+9. **Bankruptcy**: If a player runs out of money and can't pay rent, taxes, or other fees, they are declared bankrupt. Their properties and assets are then auctioned off.
+
+10. **Winning**: The last player remaining after all others have gone bankrupt is the winner and the new London property tycoon!
+
+## Get Ready to Play!
+
+Get ready for an exciting journey through the streets of London in this classic board game. Whether you're a seasoned Monopoly player or new to the game, Monopoly London offers endless hours of fun, strategy, and rivalry. Let the dice roll and see who will dominate the London property market!
+
+Are you ready to become the next Monopoly champion? Let's play Monopoly London!
+
 
 # Contributing
-If you have any suggestions or improvements for this algorithm, feel free to submit a pull request or open an issue.
+If you have any suggestions or improvements for this game, feel free to submit a pull request or open an issue.
