@@ -1,5 +1,5 @@
-# Monopoly London Board Game Algorithm
-This algorithm provides a set of instructions for playing the Monopoly London board game.
+# Monopoly London Board Game 
+
 
 ## Requirements
 This algorithm requires a Monopoly London board game set, including the game board, tokens, dice, Chance and Community Chest cards, and play money.
